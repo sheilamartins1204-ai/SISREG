@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/BI5UAJeN7NstHqnj2Q1VkCxzKfaGRVfD/91903620-093d-4296-8200-67f60d8f8740/files/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1B5E20">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SISREG Chapecó">
+<title>SISREG Chapecó</title>
+<link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22SISREG%20Chapec%C3%B3%22%2C%22short_name%22%3A%22SISREG%22%2C%22description%22%3A%22Fluxograma%20de%20Regula%C3%A7%C3%A3o%20Ambulatorial%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23F1F8F1%22%2C%22theme_color%22%3A%22%231B5E20%22%2C%22orientation%22%3A%22portrait%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%2520xmlns%253D'http%253A%252F%252Fwww.w3.org%252F2000%252Fsvg'%2520viewBox%253D'0%25200%2520192%2520192'%253E%253Crect%2520width%253D'192'%2520height%253D'192'%2520rx%253D'32'%2520fill%253D'%25231B5E20'%252F%253E%253Ctext%2520x%253D'96'%2520y%253D'130'%2520font-size%253D'100'%2520text-anchor%253D'middle'%253E%25F0%259F%2591%25A5%253C%252Ftext%253E%253C%252Fsvg%253E%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    const sw=`self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>clients.claim());self.addEventListener('fetch',e=>{e.respondWith(caches.open('sisreg-v1').then(c=>c.match(e.request).then(r=>r||fetch(e.request).then(nr=>{c.put(e.request,nr.clone());return nr}))))});`;
+    const blob=new Blob([sw],{type:'application/javascript'});
+    const url=URL.createObjectURL(blob);
+    navigator.serviceWorker.register(url).catch(()=>{});
+  });
+}
+</script>
+<style>
+:root {
+  --gd: #1B5E20; --g: #2E7D32; --gm: #388E3C; --gl: #43A047;
+  --gp: #E8F5E9; --gxp: #F1F8F1;
+  --red:#C62828; --yel:#F9A825; --blu:#1565C0; --ora:#E65100; --pur:#6A1B9A;
+  --bg:#F1F8F1; --card:#fff; --text:#1A2E1A; --mut:#5D7A5D; --bdr:#C8E6C9;
+  --sh:0 2px 8px rgba(0,0,0,.09); --r:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:90px}
+
+header{background:linear-gradient(135deg,var(--gd),var(--gl));color:#fff;padding:16px 20px 12px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.22)}
+.htop{display:flex;align-items:center;gap:10px}
+.hico{font-size:28px}
+.htit{font-size:17px;font-weight:700;line-height:1.2}
+.hsub{font-size:11px;opacity:.8;margin-top:2px}
+.sw{margin:8px 0 0;position:relative}
+.sw input{width:100%;padding:10px 40px 10px 14px;border-radius:8px;border:none;background:rgba(255,255,255,.22);color:#fff;font-size:14px;outline:none}
+.sw input::placeholder{color:rgba(255,255,255,.65)}
+.sico{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.7}
+.sclr{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.8;cursor:pointer;display:none;background:none;border:none;color:#fff;padding:0}
+
+.bnav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;box-shadow:0 -2px 10px rgba(0,0,0,.12);z-index:200;padding-bottom:env(safe-area-inset-bottom);border-top:2px solid var(--gp)}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;padding:8px 2px 6px;cursor:pointer;background:none;border:none;color:var(--mut);font-size:10px;gap:3px;transition:color .2s;-webkit-tap-highlight-color:transparent}
+.nb .ni{font-size:20px}
+.nb.active{color:var(--g)}
+.nb.active .ni{transform:scale(1.1)}
+
+.content{padding:16px 16px 0}
+
+.sechdr{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding:12px 16px;background:#fff;border-radius:var(--r);box-shadow:var(--sh);border-left:4px solid var(--g)}
+.sechdr .si{font-size:26px}
+.sechdr h2{font-size:17px;font-weight:700;color:var(--gd)}
+.sechdr p{font-size:12px;color:var(--mut);margin-top:2px}
+
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:12px;overflow:hidden}
+.ch{padding:12px 16px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bdr);background:var(--gp);color:var(--gd)}
+.cb{padding:12px 16px}
+
+.al{border-radius:var(--r);padding:12px 14px;margin-bottom:10px;font-size:13px;line-height:1.5;display:flex;gap:10px;align-items:flex-start}
+.ai{font-size:18px;flex-shrink:0;margin-top:1px}
+.al.danger{background:#FFEBEE;border-left:4px solid var(--red)}
+.al.warn{background:#FFF8E1;border-left:4px solid var(--yel)}
+.al.info{background:var(--gp);border-left:4px solid var(--g)}
+.al.ok{background:#E8F5E9;border-left:4px solid var(--gl)}
+
+.steps{list-style:none}
+.step{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
+.sn{width:28px;height:28px;min-width:28px;background:var(--g);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.st{font-size:13px;line-height:1.6;padding-top:3px}
+.st strong{color:var(--gd)}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.tg{background:#E8F5E9;color:#1B5E20}
+.tb{background:#E3F2FD;color:#0D47A1}
+.tr{background:#FFEBEE;color:#B71C1C}
+.ty{background:#FFF9C4;color:#F57F17}
+.to{background:#FFF3E0;color:#BF360C}
+.tp{background:#F3E5F5;color:#4A148C}
+
+.crow{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--bdr)}
+.crow:last-child{border-bottom:none}
+.dot{width:18px;height:18px;min-width:18px;border-radius:50%;margin-top:2px}
+.db{background:#1565C0}.dy{background:#F9A825}.dr{background:#C62828}.dg{background:#2E7D32}
+.ci{font-size:13px;line-height:1.5}
+.ci strong{font-size:12px;text-transform:uppercase;letter-spacing:.3px}
+
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--gp);color:var(--gd);padding:8px;text-align:left}
+.tbl td{padding:8px;border-bottom:1px solid var(--bdr);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+
+.cc{background:#fff;border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh);margin-bottom:10px;display:flex;align-items:flex-start;gap:12px;border-left:3px solid var(--gl)}
+.cico{font-size:24px;margin-top:2px}
+.ctit{font-size:13px;font-weight:700;color:var(--gd)}
+.cval{font-size:12px;color:var(--mut);margin-top:2px;word-break:break-all}
+.cval a{color:var(--g);text-decoration:none}
+
+.sri{background:#fff;border-radius:var(--r);padding:14px 16px;margin-bottom:10px;box-shadow:var(--sh);border-left:3px solid var(--g)}
+.sri p{font-size:12px;color:var(--text);line-height:1.6}
+.sh2{background:#C8E6C9;border-radius:3px;padding:0 2px}
+.stag{font-size:10px;color:#fff;background:var(--g);border-radius:10px;padding:2px 7px;margin-bottom:6px;display:inline-block}
+
+.empty{text-align:center;padding:40px 20px;color:var(--mut)}
+.empty .ei{font-size:48px;margin-bottom:12px}
+.empty p{font-size:14px}
+
+.footer{text-align:center;padding:20px 16px 12px;font-size:12px;color:var(--mut);border-top:1px solid var(--bdr);margin-top:8px;line-height:1.8}
+.footer strong{color:var(--gd)}
+
+.page{display:none}
+.page.active{display:block}
+
+.mbtn{padding:12px;border-radius:10px;border:1.5px solid var(--bdr);background:#fff;font-size:13px;font-weight:600;cursor:pointer;color:var(--text);text-align:left;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.mbtn:active{background:var(--gp)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="htop">
+    <span class="hico">🏥</span>
+    <div>
+      <div class="htit">SISREG Chapecó</div>
+      <div class="hsub">Fluxograma de Regulação Ambulatorial</div>
+    </div>
+  </div>
+  <div class="sw">
+    <input type="text" id="SI" placeholder="Buscar: BPA-I, cancelamento, sífilis..." oninput="hs(this.value)">
+    <span class="sico" id="SICO">🔍</span>
+    <button class="sclr" id="SCLR" onclick="cs()">✕</button>
+  </div>
+</header>
+
+<div class="content">
+
+<!-- GERAL -->
+<div class="page active" id="pg-geral">
+  <div class="sechdr"><span class="si">🔄</span><div><h2>Fluxo Geral</h2><p>Passo a passo da regulação ambulatorial</p></div></div>
+  <div class="al danger"><span class="ai">🚫</span><div><strong>NUNCA cancele para reinserir!</strong><br>O paciente perde a posição cronológica. Solicite devolução e acrescente os dados na MESMA solicitação.</div></div>
+  <div class="card">
+    <div class="ch">📋 Passo a Passo</div>
+    <div class="cb">
+      <ol class="steps">
+        <li class="step"><span class="sn">1</span><span class="st"><strong>Atendimento na UBS:</strong> Médico atende, registra em prontuário e emite solicitação. Porta de entrada obrigatória: SUS.</span></li>
+        <li class="step"><span class="sn">2</span><span class="st"><strong>Inserção no SISREG:</strong> Operador insere em cor <span class="tag tb">AZUL</span>. CNS atualizado + raça/cor obrigatórios (Portaria 344/2017 — código 99 NÃO aceito).</span></li>
+        <li class="step"><span class="sn">3</span><span class="st"><strong>Regulação classifica:</strong> <span class="tag tr">Vermelho</span> urgente · <span class="tag ty">Amarelo</span> prioritário · <span class="tag tb">Azul</span> eletivo. Só o regulador troca a cor.</span></li>
+        <li class="step"><span class="sn">4</span><span class="st"><strong>Autorização:</strong> Mínimo 10 dias de antecedência. Visualização máx. 45 dias. Retornos: inserir até 90 dias antes, sempre em azul.</span></li>
+        <li class="step"><span class="sn">5</span><span class="st"><strong>UBS verifica diariamente</strong> as autorizações e comunica o paciente. Paciente retira guia em até 5 dias úteis.</span></li>
+        <li class="step"><span class="sn">6</span><span class="st"><strong>Paciente comparece:</strong> 30 min antes, com RG + CPF + CNS + comprovante endereço + exames. Sem documentos = não atendido.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch" style="background:#FFF3E0;color:#BF360C;">⚠️ Regras Críticas</div>
+    <div class="cb">
+      <div class="al warn"><span class="ai">⏰</span><div><strong>Cancelamento:</strong> mínimo 72h de antecedência com justificativa obrigatória.</div></div>
+      <div class="al warn"><span class="ai">👤</span><div><strong>Preferência de médico/unidade</strong> pelo usuário NÃO é justificativa para cancelamento.</div></div>
+      <div class="al warn"><span class="ai">🏥</span><div><strong>1° retorno pós-operatório imediato:</strong> agendado pelo setor de Regulação, NÃO pelas UBS.</div></div>
+      <div class="al info"><span class="ai">📮</span><div><strong>CIS AMOSC:</strong> aguardar guia física via malote antes de entregar ao paciente.</div></div>
+      <div class="al info"><span class="ai">🔑</span><div>Conferir <strong>número de chave de confirmação</strong> na guia impressa.</div></div>
+      <div class="al danger"><span class="ai">🚫</span><div><strong>ASAPREV NÃO é porta SUS</strong> — oferecer consulta na UBS de referência.</div></div>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- INSERÇÃO -->
+<div class="page" id="pg-insercao">
+  <div class="sechdr"><span class="si">📋</span><div><h2>Inserção e Devolutivas</h2><p>Cores, prazos e como tratar devoluções</p></div></div>
+  <div class="card">
+    <div class="ch">🎨 Cores de Inserção</div>
+    <div class="cb">
+      <div class="crow"><div class="dot db"></div><div class="ci"><strong>Azul — padrão UBS</strong><br>Todas as inserções das UBS. Retornos sempre em azul.</div></div>
+      <div class="crow"><div class="dot dy"></div><div class="ci"><strong>Amarelo — pré-operatório</strong><br>Somente com cirurgia JÁ agendada e com data marcada.</div></div>
+      <div class="crow"><div class="dot dr"></div><div class="ci"><strong>Vermelho — exclusivo regulador</strong><br>UBS NUNCA insere em vermelho.</div></div>
+      <div class="crow"><div class="dot dg"></div><div class="ci"><strong>Verde — retorno com exames</strong><br>Retornos com exames prontos.</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">📬 Devolutivas</div>
+    <div class="cb">
+      <div class="al info"><span class="ai">📖</span><div>Ler o motivo com atenção. Muitas vezes é <strong>informação</strong>, não cancelamento.</div></div>
+      <ol class="steps">
+        <li class="step"><span class="sn">1</span><span class="st">Realizar nova avaliação médica antes de devolver.</span></li>
+        <li class="step"><span class="sn">2</span><span class="st">Solicitar devolução da <strong>MESMA solicitação</strong> — não cancelar e reinserir.</span></li>
+        <li class="step"><span class="sn">3</span><span class="st">Enviar e-mail com o modelo abaixo.</span></li>
+      </ol>
+      <div style="background:#F1F8F1;border-radius:8px;padding:12px;font-size:12px;font-family:monospace;line-height:1.8;margin-top:4px;border:1px solid var(--bdr)">
+        <strong>Título:</strong> Consulta [Especialidade]<br>
+        <strong>Motivo:</strong> [descrever]<br>
+        <strong>CNS:</strong> [número]<br>
+        <strong>Nº Solicitação:</strong> [número]<br>
+        <strong>Nome:</strong> [nome do paciente]
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch" style="background:#FFEBEE;color:#B71C1C;">❌ Cancelamentos</div>
+    <div class="cb">
+      <div class="al danger"><span class="ai">⏱️</span><div>Mínimo <strong>72h</strong> de antecedência. Justificativa compulsória.</div></div>
+      <ul style="font-size:13px;line-height:1.9;padding-left:18px">
+        <li>Quem inseriu, cancela (ESF ou Secretaria).</li>
+        <li>Recolher guia SISREG + guia CIS AMOSC (quando houver).</li>
+        <li>Autorizações com horário 00:00 de datas retroativas: enviar e-mail ao administrador.</li>
+      </ul>
+      <div class="cc" style="margin-top:12px">
+        <span class="cico">📧</span>
+        <div><div class="ctit">E-mail Cancelamentos</div><div class="cval"><a href="mailto:cancelamentosisreg@chapeco.sc.gov.br">cancelamentosisreg@chapeco.sc.gov.br</a></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- ESPECIALIDADES -->
+<div class="page" id="pg-especialidades">
+  <div class="sechdr"><span class="si">🏥</span><div><h2>Especialidades</h2><p>Fluxos por especialidade médica</p></div></div>
+  <div class="card"><div class="ch">🦴 Ortopedia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Adultos → inserir em <strong>Ortopedia Geral</strong>.<br>Alta Complexidade: somente por orientação do regulador.</p></div></div>
+  <div class="card"><div class="ch">👁️ Oftalmologia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Inserir pela especialidade correta. Cirurgias: entregar documentação na Regulação.<br>Laudo BPA-I obrigatório para cirurgias de alto custo.</p></div></div>
+  <div class="card"><div class="ch">🎗️ Oncologia / UNACON</div><div class="cb"><p style="font-size:13px;line-height:1.6"><strong>1ª vez:</strong> via malote com documentação completa.<br><strong>Já paciente HRO:</strong> inserir normalmente no SISREG.</p></div></div>
+  <div class="card"><div class="ch">🫀 Nefrologia</div><div class="cb"><div class="al warn"><span class="ai">📡</span><div><strong>DRC 3b/4/5:</strong> teleconsultoria compulsória antes da inserção.<br><a href="https://telessaude.ufsc.br" style="color:var(--g)">telessaude.ufsc.br</a></div></div></div></div>
+  <div class="card"><div class="ch">❤️ Cardiologia Alta Complexidade</div><div class="cb"><div class="al ok"><span class="ai">✅</span><div>Não precisa mais laudo TFD.</div></div></div></div>
+  <div class="card"><div class="ch">🧠 Neurologia</div><div class="cb"><p style="font-size:13px;line-height:1.6"><strong>Neuropediatra:</strong> até 11a 11m 29d<br><strong>Neurologia Geral:</strong> a partir de 12 anos</p></div></div>
+  <div class="card"><div class="ch">🦠 Infectologia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Inserir em <strong>Consulta em Infectologia Geral</strong> no SISREG (não mais via SAE).</p></div></div>
+  <div class="card"><div class="ch">🔬 Dermatologia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Informar <strong>protocolo da dermatoscopia</strong> no encaminhamento.</p></div></div>
+  <div class="card">
+    <div class="ch" style="background:#F3E5F5;color:#4A148C;">📮 Via Malote à Regulação</div>
+    <div class="cb">
+      <div class="tags"><span class="tag tp">Oncologia 1ª vez</span><span class="tag tp">Cirurgias eletivas AIH</span><span class="tag tp">Oftalmo pré-op</span><span class="tag tp">Alergista (TFD)</span><span class="tag tp">Hematologista Infantil</span></div>
+      <div class="al warn" style="margin-top:10px"><span class="ai">🔇</span><div><strong>Saúde Auditiva:</strong> NÃO inserir no SISREG. Via malote ao setor de Saúde Auditiva.</div></div>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- EXAMES -->
+<div class="page" id="pg-exames">
+  <div class="sechdr"><span class="si">🔬</span><div><h2>Exames</h2><p>Regras específicas por tipo de exame</p></div></div>
+  <div class="card">
+    <div class="ch" style="background:#FFEBEE;color:#B71C1C;">📄 Exames que exigem Laudo BPA-I (2 vias)</div>
+    <div class="cb">
+      <div class="tags"><span class="tag tr">Tomografia</span><span class="tag tr">Ressonância</span><span class="tag tr">Cintilografia</span><span class="tag tr">Densitometria óssea</span><span class="tag tr">Litotripsia</span><span class="tag tr">Angiotomografia</span><span class="tag tr">Dacriocintilografia</span><span class="tag tr">Capsulotomia</span><span class="tag tr">Facoemulsificação</span><span class="tag tr">Trabeculectomia</span><span class="tag tr">Cirurgias oftalmo alto custo</span></div>
+    </div>
+  </div>
+  <div class="card"><div class="ch">🩺 Colonoscopia</div><div class="cb"><div class="al warn"><span class="ai">👥</span><div>Acompanhante maior de 18 anos <strong>obrigatório</strong>.</div></div><p style="font-size:13px;line-height:1.6">Prestador Unimed: agendar com pré-anestésicos prontos.</p></div></div>
+  <div class="card"><div class="ch">🩻 Mamografia</div><div class="cb"><table class="tbl"><tr><th>Código</th><th>Tipo</th><th>Indicação</th></tr><tr><td>02.04.03.018-8</td><td>Bilateral</td><td>Rastreamento 35–130 anos</td></tr><tr><td>02.04.03.003-0</td><td>Unilateral</td><td>Alto risco / alterado</td></tr></table></div></div>
+  <div class="card"><div class="ch">🧲 Tomografia / Ressonância</div><div class="cb"><div class="al danger"><span class="ai">📄</span><div>Laudo BPA-I obrigatório. Especificar <strong>com/sem contraste</strong>.</div></div><div class="al info"><span class="ai">💡</span><div><strong>Abdome total</strong> = Abdome Superior + Bacia/Pelve (2 links).</div></div></div></div>
+  <div class="card"><div class="ch">🤰 USG Obstétrica</div><div class="cb"><div class="al warn"><span class="ai">📅</span><div>DUM obrigatória no campo da solicitação.</div></div><p style="font-size:13px;line-height:1.6;margin-top:8px"><strong>Baixo risco:</strong> 2 USGs<br>1ª: 12ª–14ª semana · 2ª: 22ª–24ª semana</p></div></div>
+  <div class="card"><div class="ch">💓 ECG / Holter</div><div class="cb"><ul style="font-size:13px;line-height:1.9;padding-left:18px"><li><strong>ECG:</strong> usar link <em>Eletrocardiograma Telemedicina</em></li><li><strong>Holter 24h:</strong> código <em>Monitoramento pelo Sistema Holter</em></li></ul></div></div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- REABILITAÇÃO -->
+<div class="page" id="pg-reabilitacao">
+  <div class="sechdr"><span class="si">♿</span><div><h2>Reabilitação</h2><p>Fisioterapia, fono, TO e saúde auditiva</p></div></div>
+  <div class="al danger"><span class="ai">🔇</span><div><strong>Saúde Auditiva:</strong> NÃO inserir no SISREG. Encaminhar via malote ao setor de Saúde Auditiva.</div></div>
+  <div class="card"><div class="ch">🏃 Fisioterapia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Inserida normalmente pelas UBS no SISREG.</p></div></div>
+  <div class="card"><div class="ch">🖐️ Terapia Ocupacional</div><div class="cb"><p style="font-size:13px;line-height:1.6">1ª vez: inserir como <strong>Terapia Ocupacional Individual</strong>.</p></div></div>
+  <div class="card"><div class="ch">🗣️ Fonoaudiologia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Via malote ao setor de Saúde Auditiva.</p></div></div>
+  <div class="cc"><span class="cico">📍</span><div><div class="ctit">CER — Centro de Reabilitação</div><div class="cval">Rua Rondônia, 213 — Bairro Santo Antônio, Chapecó/SC</div></div></div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- GINECO -->
+<div class="page" id="pg-gineco">
+  <div class="sechdr"><span class="si">🤰</span><div><h2>Gineco / Obstetrícia</h2><p>Pré-natal, colposcopia e cirurgias</p></div></div>
+  <div class="card"><div class="ch">🤰 Pré-natal Alto Risco</div><div class="cb"><p style="font-size:13px;line-height:1.6">Inserir como <strong>Consulta em Pré-Natal de Alto Risco</strong> (Clínica da Mulher).</p><div class="al info" style="margin-top:10px"><span class="ai">🦠</span><div><strong>Sífilis:</strong> usar link Pré-Natal de Alto Risco (link sífilis foi encerrado).</div></div></div></div>
+  <div class="card"><div class="ch">🔭 Colposcopia</div><div class="cb"><p style="font-size:13px;line-height:1.6">Inserir como <strong>Consulta em Cirurgia Ginecológica — Colposcopia</strong>.</p></div></div>
+  <div class="card"><div class="ch">✂️ Vasectomia / Laqueadura</div><div class="cb"><div class="al warn"><span class="ai">📁</span><div>Documentação completa do casal obrigatória antes da inserção.</div></div></div></div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- PRESTADORES -->
+<div class="page" id="pg-prestadores">
+  <div class="sechdr"><span class="si">📍</span><div><h2>Prestadores e Contatos</h2><p>Links, e-mails e endereços úteis</p></div></div>
+  <div class="cc"><span class="cico">📧</span><div><div class="ctit">Cancelamentos SISREG</div><div class="cval"><a href="mailto:cancelamentosisreg@chapeco.sc.gov.br">cancelamentosisreg@chapeco.sc.gov.br</a></div></div></div>
+  <div class="cc"><span class="cico">🌐</span><div><div class="ctit">Fila de Espera Pública SC</div><div class="cval"><a href="http://listadeespera.saude.sc.gov.br" target="_blank">listadeespera.saude.sc.gov.br</a></div></div></div>
+  <div class="cc"><span class="cico">🎫</span><div><div class="ctit">Chamados / Suporte SISREG</div><div class="cval"><a href="https://webatendimento.saude.gov.br/" target="_blank">webatendimento.saude.gov.br</a></div></div></div>
+  <div class="cc"><span class="cico">📡</span><div><div class="ctit">Teleconsultoria UFSC (Nefrologia)</div><div class="cval"><a href="https://telessaude.ufsc.br" target="_blank">telessaude.ufsc.br</a></div></div></div>
+  <div class="cc"><span class="cico">📍</span><div><div class="ctit">CER — Centro de Reabilitação</div><div class="cval">Rua Rondônia, 213 — Bairro Santo Antônio</div></div></div>
+  <div class="card">
+    <div class="ch" style="background:#F3E5F5;color:#4A148C;">🔗 Links CER Macro Oeste</div>
+    <div class="cb">
+      <table class="tbl">
+        <tr><th>Código</th><th>Especialidade</th></tr>
+        <tr><td>0701363</td><td>Oncologia Clínica (HRO)</td></tr>
+        <tr><td>0604009</td><td>Oncologia Pediátrica (HRO)</td></tr>
+        <tr><td>0406007</td><td>Hematologia-Oncologia (HRO)</td></tr>
+        <tr><td>0703568</td><td>Neurocirurgia Tumor (HRO·CERA)</td></tr>
+        <tr><td>0766167</td><td>Ortopedia Pediátrica (HRO)</td></tr>
+        <tr><td>0766092</td><td>Pré-Transplante Córnea (HRO)</td></tr>
+        <tr><td>2018710</td><td>Nefrologia DRC (Clínica Renal)</td></tr>
+        <tr><td>0139022</td><td>Cardiologia Adulto TCGA</td></tr>
+        <tr><td>0701927</td><td>Cirurgia Vascular Alta Complexidade</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- ABSENTEÍSMO -->
+<div class="page" id="pg-absenteismo">
+  <div class="sechdr"><span class="si">⚠️</span><div><h2>Absenteísmo</h2><p>Deliberação 225/CIB/2019</p></div></div>
+  <div class="card">
+    <div class="ch">📊 Tipos de Perda</div>
+    <div class="cb">
+      <table class="tbl">
+        <tr><th>Tipo</th><th>Responsável</th></tr>
+        <tr><td><span class="tag tr">Primária</span></td><td>Central de Regulação</td></tr>
+        <tr><td><span class="tag ty">Secundária</span></td><td>UBS</td></tr>
+        <tr><td><span class="tag tb">Terciária</span></td><td>Usuário</td></tr>
+        <tr><td><span class="tag to">Quaternária</span></td><td>Prestador</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">🏥 Responsabilidade da UBS</div>
+    <div class="cb">
+      <ol class="steps">
+        <li class="step"><span class="sn">1</span><span class="st">Verificar autorizações <strong>diariamente</strong>.</span></li>
+        <li class="step"><span class="sn">2</span><span class="st">Se não localizar paciente: cancelar com mínimo <strong>5 dias úteis</strong> de antecedência.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">👤 Responsabilidade do Paciente</div>
+    <div class="cb">
+      <ol class="steps">
+        <li class="step"><span class="sn">1</span><span class="st">Retirar autorização em até <strong>5 dias úteis</strong>.</span></li>
+        <li class="step"><span class="sn">2</span><span class="st"><strong>2 faltas consecutivas</strong> sem justificativa → retorno à APS (fila reinicia).</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- SISTEMA -->
+<div class="page" id="pg-sistema">
+  <div class="sechdr"><span class="si">⚙️</span><div><h2>Sistema e Atualizações</h2><p>Configurações, portarias e novidades</p></div></div>
+  <div class="al danger"><span class="ai">🎨</span><div><strong>Campo raça/cor:</strong> código 99 NÃO é aceito.<br>Opções: Branca · Preta · Parda · Amarela · Indígena (Portaria 344/2017)</div></div>
+  <div class="card">
+    <div class="ch" style="background:#FFF3E0;color:#BF360C;">📢 Portaria SAES/MS 3.025/2025</div>
+    <div class="cb"><p style="font-size:13px;line-height:1.6">Vigência: <strong>10/07/2025</strong> — Alterações na SIGTAP.<br>Verificar exclusões, inclusões e alterações de procedimentos antes de inserir.</p></div>
+  </div>
+  <div class="card">
+    <div class="ch">🌐 Links do Sistema</div>
+    <div class="cb">
+      <div class="cc" style="box-shadow:none;padding:8px 0;border-bottom:1px solid var(--bdr)"><span class="cico">📋</span><div><div class="ctit">Fila de Espera Pública SC</div><div class="cval"><a href="http://listadeespera.saude.sc.gov.br" target="_blank">listadeespera.saude.sc.gov.br</a></div></div></div>
+      <div class="cc" style="box-shadow:none;padding:8px 0"><span class="cico">🎫</span><div><div class="ctit">Chamados / Suporte SISREG</div><div class="cval"><a href="https://webatendimento.saude.gov.br/" target="_blank">webatendimento.saude.gov.br</a></div></div></div>
+    </div>
+  </div>
+  <div class="footer">Desenvolvido por <strong>Sheila Cristina</strong><br>Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<!-- BUSCA -->
+<div class="page" id="pg-search">
+  <div id="SR"></div>
+</div>
+
+</div><!-- /content -->
+
+<!-- BOTTOM NAV -->
+<nav class="bnav">
+  <button class="nb active" onclick="sp('geral',this)"><span class="ni">🔄</span><span>Geral</span></button>
+  <button class="nb" onclick="sp('insercao',this)"><span class="ni">📋</span><span>Inserção</span></button>
+  <button class="nb" onclick="sp('especialidades',this)"><span class="ni">🏥</span><span>Espec.</span></button>
+  <button class="nb" onclick="sp('exames',this)"><span class="ni">🔬</span><span>Exames</span></button>
+  <button class="nb" onclick="smm()"><span class="ni">⋯</span><span>Mais</span></button>
+</nav>
+
+<!-- INSTALL BANNER -->
+<div id="INSTBANNER" style="display:none;position:fixed;top:0;left:0;right:0;z-index:400;background:linear-gradient(135deg,#1B5E20,#43A047);color:#fff;padding:12px 16px;align-items:center;gap:10px;box-shadow:0 2px 10px rgba(0,0,0,.3)">
+  <span style="font-size:22px">📲</span>
+  <div style="flex:1;font-size:13px"><strong>Instalar app</strong><br><span style="font-size:11px;opacity:.85">Adicione à tela inicial para usar offline</span></div>
+  <button id="INSTBTN" style="background:#fff;color:#1B5E20;border:none;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer">Instalar</button>
+  <button onclick="document.getElementById('INSTBANNER').style.display='none'" style="background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:0 4px">✕</button>
+</div>
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt',function(e){
+  e.preventDefault();
+  deferredPrompt=e;
+  const banner=document.getElementById('INSTBANNER');
+  banner.style.display='flex';
+  document.getElementById('INSTBTN').onclick=function(){
+    banner.style.display='none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(()=>{deferredPrompt=null});
+  };
+});
+window.addEventListener('appinstalled',function(){
+  document.getElementById('INSTBANNER').style.display='none';
+});
+</script>
+<!-- MORE MENU -->
+<div id="OVL" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:250" onclick="cmm()"></div>
+<div id="MM" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.18);border-radius:20px 20px 0 0;padding:20px 16px;z-index:300">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <strong style="font-size:16px;color:var(--gd)">Mais seções</strong>
+    <button onclick="cmm()" style="background:none;border:none;font-size:24px;cursor:pointer;color:var(--mut)">✕</button>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <button class="mbtn" onclick="sp('reabilitacao');cmm()">♿ Reabilitação</button>
+    <button class="mbtn" onclick="sp('gineco');cmm()">🤰 Gineco/Obstetrícia</button>
+    <button class="mbtn" onclick="sp('prestadores');cmm()">📍 Prestadores</button>
+    <button class="mbtn" onclick="sp('absenteismo');cmm()">⚠️ Absenteísmo</button>
+    <button class="mbtn" onclick="sp('sistema');cmm()" style="grid-column:span 2">⚙️ Sistema e Atualizações</button>
+  </div>
+  <div style="text-align:center;margin-top:16px;font-size:11px;color:var(--mut)">Desenvolvido por <strong style="color:var(--gd)">Sheila Cristina</strong> — Acadêmica de Enfermagem 🌿</div>
+</div>
+
+<script>
+const SD=[
+  {s:"Fluxo Geral",k:["cancelar","reinserir","posição cronologica","cancelamento reinserir"],t:"NUNCA cancele para reinserir. O paciente perde a posição cronológica. Solicite devolução e acrescente na MESMA solicitação."},
+  {s:"Inserção",k:["azul","cor azul","inserção","inserir cor"],t:"Sempre inserir em cor AZUL. CNS atualizado + raça/cor obrigatórios (código 99 NÃO aceito, Portaria 344/2017)."},
+  {s:"Inserção",k:["amarelo","pre-operatorio","pré-operatório"],t:"Amarelo: somente pré-operatórios com cirurgia JÁ agendada e com data marcada."},
+  {s:"Inserção",k:["vermelho","regulador","urgente"],t:"Vermelho: exclusivo do regulador. UBS NUNCA insere em vermelho."},
+  {s:"Cancelamentos",k:["72h","72 horas","prazo","antecedencia"],t:"Cancelamento: mínimo 72h de antecedência com justificativa compulsória."},
+  {s:"Exames",k:["bpa","bpa-i","laudo","laudo bpa"],t:"Exigem Laudo BPA-I (2 vias): Tomografia, Ressonância, Cintilografia, Densitometria óssea, Litotripsia, Angiotomografia, Facoemulsificação, Trabeculectomia."},
+  {s:"Especialidades",k:["cis amosc","amosc","guia malote"],t:"Agendamentos CIS AMOSC: aguardar guia física via malote antes de entregar ao paciente."},
+  {s:"Devolutivas",k:["devolutiva","devolucao","devolver","devolução"],t:"Solicite devolução da MESMA solicitação — não cancele. Faça nova avaliação médica antes. Use o modelo de e-mail."},
+  {s:"Fluxo Geral",k:["retorno","pos-operatorio","pós-operatório"],t:"1° retorno pós-operatório imediato: agendado pela Regulação, NÃO pelas UBS. Retornos: inserir até 90 dias antes, sempre em azul."},
+  {s:"Fluxo Geral",k:["documentos","rg cpf cns","documentação"],t:"Paciente: RG + CPF + CNS + comprovante de endereço + exames. Sem documentos = não atendido."},
+  {s:"Sistema",k:["raca","raça","codigo 99","código 99","portaria 344"],t:"Campo raça/cor obrigatório. Código 99 NÃO aceito. Opções: Branca, Preta, Parda, Amarela, Indígena."},
+  {s:"Absenteísmo",k:["falta","absenteismo","2 faltas","nao compareceu"],t:"2 faltas consecutivas sem justificativa = retorno à APS. UBS cancela com mínimo 5 dias úteis se não localizar paciente."},
+  {s:"Nefrologia",k:["nefrologia","drc","teleconsultoria","telessaude"],t:"Nefrologia DRC 3b/4/5: teleconsultoria compulsória antes da inserção (telessaude.ufsc.br)."},
+  {s:"Mamografia",k:["mamografia","mamografia bilateral","mamografia unilateral"],t:"Bilateral (02.04.03.018-8): rastreamento 35-130 anos. Unilateral (02.04.03.003-0): alto risco/alterado."},
+  {s:"Colonoscopia",k:["colonoscopia","acompanhante"],t:"Colonoscopia: acompanhante maior de 18 anos obrigatório. Prestador Unimed: agendar com pré-anestésicos prontos."},
+  {s:"Fluxo Geral",k:["asaprev","porta sus","porta de entrada"],t:"ASAPREV NÃO é porta SUS. Oferecer consulta na UBS de referência. Emergência/PS só entra após avaliação médica."},
+  {s:"Gineco",k:["sifilis","sífilis","pre-natal alto risco"],t:"Sífilis: usar link Pré-Natal de Alto Risco (link sífilis encerrado). Pré-natal alto risco: Clínica da Mulher."},
+  {s:"Reabilitação",k:["saude auditiva","saúde auditiva","fonoaudiologia","fono"],t:"Saúde Auditiva e Fonoaudiologia: NÃO inserir no SISREG. Via malote ao setor de Saúde Auditiva."},
+  {s:"Contatos",k:["email","e-mail","contato","cancelamentosisreg"],t:"Cancelamentos: cancelamentosisreg@chapeco.sc.gov.br | Chamados: webatendimento.saude.gov.br | Espera: listadeespera.saude.sc.gov.br"},
+];
+
+function sp(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pg-'+id).classList.add('active');
+  if(btn)btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+function smm(){document.getElementById('MM').style.display='block';document.getElementById('OVL').style.display='block'}
+function cmm(){document.getElementById('MM').style.display='none';document.getElementById('OVL').style.display='none'}
+function hs(v){
+  const clr=document.getElementById('SCLR'),ico=document.getElementById('SICO');
+  if(v.trim().length>1){clr.style.display='block';ico.style.display='none';ps(v.trim().toLowerCase())}
+  else{clr.style.display='none';ico.style.display='block';if(document.getElementById('pg-search').classList.contains('active'))sp('geral')}
+}
+function cs(){document.getElementById('SI').value='';document.getElementById('SCLR').style.display='none';document.getElementById('SICO').style.display='block';sp('geral')}
+function hl(txt,q){const i=txt.toLowerCase().indexOf(q);if(i<0)return txt;return txt.slice(0,i)+'<span class="sh2">'+txt.slice(i,i+q.length)+'</span>'+txt.slice(i+q.length)}
+function ps(q){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pg-search').classList.add('active');
+  const res=SD.filter(r=>r.k.some(k=>k.includes(q)||q.includes(k))||r.t.toLowerCase().includes(q)||r.s.toLowerCase().includes(q));
+  const c=document.getElementById('SR');
+  if(!res.length){c.innerHTML='<div class="empty"><div class="ei">🔍</div><p>Nenhum resultado para "<strong>'+q+'</strong>".<br>Tente outros termos.</p></div>';return}
+  c.innerHTML='<div style="font-size:12px;color:var(--mut);margin-bottom:12px">'+res.length+' resultado(s) para "<strong>'+q+'</strong>"</div>'+
+    res.map(r=>'<div class="sri"><div class="stag">'+r.s+'</div><p>'+hl(r.t,q)+'</p></div>').join('');
+}
+</script>
+</body>
+</html>
